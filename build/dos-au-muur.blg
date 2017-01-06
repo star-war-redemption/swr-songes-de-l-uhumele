@@ -1,0 +1,9 @@
+[0] Config.pm:354> INFO - This is Biber 2.6
+[0] Config.pm:357> INFO - Logfile is 'build/dos-au-muur.blg'
+[24] biber:302> INFO - === sam. janv.  7, 2017, 00:12:32
+[38] Biber.pm:360> INFO - Reading 'build/dos-au-muur.bcf'
+[96] Biber.pm:821> INFO - Using all citekeys in bib section 0
+[106] Biber.pm:3659> INFO - Processing section 0
+[117] Biber.pm:3829> INFO - Looking for bibtex format file 'references.bib' for section 0
+[135] Utils.pm:180> ERROR - Cannot find 'references.bib'!
+[136] Biber.pm:114> INFO - ERRORS: 1
