@@ -1,0 +1,13 @@
+before_script:
+  - apt-get update -qq && apt-get install -y -qq texlive-base texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-extra-utils texlive-fonts-recommended texlive-font-utils texlive-lang-french texlive-math-extra texlive-pictures latex-xcolor texlive-bibtex-extra pgf lmodern biber latexmk ghostscript
+
+dos-au-muur:
+  stage: build
+  script:
+    - latexmk dos-au-muur/dos-au-muur.tex || true
+    - gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/ebook -sOutputFile="SW-Redemption, Dos au Muur.pdf" build/dos-au-muur.pdf
+  only:
+  - tags
+  artifacts:
+    paths:
+    - "SW-Redemption, Dos au Muur.pdf"
