@@ -5,7 +5,3 @@ Pour aller avec le guide du joueur de Star Wars Redemption, voici quelques campa
 * Dos au Muur
 
 ![image](_img/wtfpl-badge.png)
-
-## Build
-
-    latexmk
