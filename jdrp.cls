@@ -144,6 +144,8 @@
 \titleformat{\subsubsection}
 {\color{titlered}\scshape\large\raggedright}{\thesubsubsection}{0em}{}[]
 
+\newcommand*{\littlesection}[1]{\color{titlered}\raggedright\textbf{\\ #1}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Styling new commands
