@@ -25,14 +25,26 @@
 		\hspace*{\vfill}
 	\end{center}
 
-	\hspace*{\vfill}
+	%\hspace*{\vfill}
 
-	\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{_img/cover-bg.png}}
-
+	\noindent\makebox[\textwidth]{
+		\includegraphics[width=\paperwidth]{_img/cover-bg.png}}
+	\begin{tikzpicture}[overlay]
+		\node[minimum width=180pt,minimum height=180pt, rotate=30] at (15,11){\includegraphics[width=180pt]{_img/dos-au-muur/talisman.png}};
+	\end{tikzpicture}}
 	\end{titlepage}
 
 	\onecolumn
 	\section{contexte de campagne}
+	
+	\begin{wrapfigure}{R}{180pt}
+		\centering
+		\includegraphics[width=180pt]{_img/dos-au-muur/talisman.png}
+		\caption{\label{fig:talisman-de-muur}Talisman de Muur}
+		\vspace{1\baselineskip}
+		\includegraphics[width=180pt]{_img/dos-au-muur/karness-muur.png}
+		\caption{\label{fig:karness-muur}Karness Muur}
+	\end{wrapfigure}
 	
 	Cette campagne est écrite initialement pour \citetitle{jdrp-starwars} mais un scénar reste un scénar et il est jouable dans n’importe quel univers de Star Wars.
 
@@ -41,6 +53,7 @@
 	La campagne se déroule dans les premières années de l’avènement de l’Empire, au MJ de voir s’il veut préciser.
 
 	La trame de la campagne se base sur un très ancien artéfact Sith, le \citetitle{talisman-de-muur}. Un artéfact créé par Karness Muur, un Sith se servant de la Force pour prolonger sa vie. L’artéfact contient l’âme de Muur, celui qui le porte est possédé par Karness et peut contrôler les Rakghoules.
+
 
 	On trouve beaucoup d’informations sur cet artéfact sur HoloNet et je me suis grandement inspiré de ces informations pour cette campagne en faisant vivre à mes héros les aventures des divers individus qui ont croisé le Talisman\ldots
 
