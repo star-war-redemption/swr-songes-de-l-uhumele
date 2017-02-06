@@ -63,7 +63,7 @@
 \setmainfont[Path=_font/noto-sans/,
     Extension=.ttf,
     UprightFont= *-Regular,
-    SmallCapsFont=*-Regular,
+    SmallCapsFont=*,
     BoldFont=*-Bold,
     ItalicFont=*-Italic,
     BoldItalicFont=*-BoldItalic
