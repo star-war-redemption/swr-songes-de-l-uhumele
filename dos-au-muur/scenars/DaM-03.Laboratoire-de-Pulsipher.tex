@@ -75,8 +75,11 @@ Les dortoirs des scientifiques du laboratoire. A disposition des personnes trava
 \onecolumn
 \subsection{Plan du labo de Pulsipher}\label{sec:plan-labo-pulsipher}
 \begin{figure}[!h]
-    \centering
-    \includegraphics[height=0.94\textheight]{_img/dos-au-muur/labo-pulsipher-map.png}
+	\centering	
+	\begin{tikzpicture}[overlay, anchor=north]
+		\node at (0,0) {\includegraphics[height=0.94\textheight]{_img/dos-au-muur/labo-pulsipher-map.png}};
+		\node at (0,-0.4) {\includegraphics[height=0.89\textheight]{_img/dos-au-muur/labo-pulsipher-layers.png}};
+	\end{tikzpicture}
 \end{figure}
 
 \twocolumn
