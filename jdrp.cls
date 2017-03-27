@@ -152,6 +152,12 @@
 \titleformat{\subsubsection}
 {\color{titlered}\large\raggedright}{\thesubsubsection}{0em}{}[]
 
+\titleformat{\paragraph}
+    {\color{titlered}\raggedright\bfseries}
+    {\theparagraph}
+    {0em}{}
+\titlespacing{\paragraph}{0pt}{10pt}{5pt}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Styling new commands
