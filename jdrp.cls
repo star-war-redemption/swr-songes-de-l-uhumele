@@ -32,32 +32,8 @@
 \RequirePackage{wrapfig}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Biblio management 
-\RequirePackage[style=verbose,sorting=none]{biblatex}
-\setlength\bibitemsep{1.5\itemsep}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Backgrounding 
-\RequirePackage{eso-pic}
-
-\newcommand\AtTextUpperRight[1]{\AtTextUpperLeft{%
-   \makebox[\textwidth][r]{#1}}}
-
-\AddToShipoutPictureBG{%
-	\ifnum\value{page}>1
-  	\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd.jpg}}
-  	\fi
-  }
-
-\AddToShipoutPicture{
-	\ifthenelse{\isodd{\thepage}}
-    	{\AtTextUpperLeft{\hspace{1.5\baselineskip}\hspace{\textwidth}\rotatebox{-90}{\scalebox{1.5}{\aurebesh\textcolor{uppergold}{\leftmark}}}}}
-    	{\AtTextUpperLeft{\hspace{-2\baselineskip}\rotatebox{-90}{\scalebox{1.5}{\aurebesh\textcolor{uppergold}{\leftmark}}}}}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fonts
-\RequirePackage[quiet]{fontspec}
+\RequirePackage[quiet]{fontspec} 
 \RequirePackage{xunicode}
 
 \setmainfont[Path=_font/noto-sans/,
@@ -86,6 +62,30 @@
 \DeclareFieldFormat{citetitle}{\textit{#1}}
 \DeclareFieldFormat{citeauthor}{#1}
 \DeclareFieldFormat{citefield}{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Biblio management 
+\RequirePackage[style=verbose,sorting=none]{biblatex}
+\setlength\bibitemsep{1.5\itemsep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backgrounding 
+\RequirePackage{eso-pic}
+
+\newcommand\AtTextUpperRight[1]{\AtTextUpperLeft{%
+   \makebox[\textwidth][r]{#1}}}
+
+\AddToShipoutPictureBG{%
+    \ifnum\value{page}>1
+    \AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd.jpg}}
+    \fi
+  }
+
+\AddToShipoutPicture{
+    \ifthenelse{\isodd{\thepage}}
+        {\AtTextUpperLeft{\hspace{1.5\baselineskip}\hspace{\textwidth}\rotatebox{-90}{\scalebox{1.5}{\aurebesh\textcolor{uppergold}{\leftmark}}}}}
+        {\AtTextUpperLeft{\hspace{-2\baselineskip}\rotatebox{-90}{\scalebox{1.5}{\aurebesh\textcolor{uppergold}{\leftmark}}}}}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Columns setup
