@@ -20,11 +20,6 @@
 
 
 \RequirePackage{hyperref}
-\hypersetup{
-    colorlinks=true,                         
-    linkcolor=blue, 	% Couleur des liens internes
-    citecolor=red, 		% Couleur des numéros de la biblio dans le corps
-    urlcolor=blue  } 	% Couleur des url
 
 \setcounter{DefaultLines}{3}
 \setlength{\DefaultNindent}{0em}
@@ -58,10 +53,6 @@
 \renewcommand{\LettrineFontHook}{\jedifont}
 \renewcommand{\LettrineTextFont}{\upshape}	% Remove samll-caps, Noto doesn't support
 \renewcommand{\DefaultNindent}{5pt}
-
-\DeclareFieldFormat{citetitle}{\textit{#1}}
-\DeclareFieldFormat{citeauthor}{#1}
-\DeclareFieldFormat{citefield}{#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Biblio management 
@@ -106,6 +97,14 @@
 \definecolor{itemtablepink}{HTML}{E9CDC2} % e.g. used in item tables instead of the green
 %\definecolor{rulered}{HTML}{9C2B1B}		%e.g. used for triangular rule in statsblock
 
+\hypersetup{
+    colorlinks=true,                         
+    linkcolor=titlered, 	% Couleur des liens internes
+    citecolor=titlered, 		% Couleur des numéros de la biblio dans le corps
+    urlcolor=titlered,
+    allbordercolors=0 0 1,
+    linkbordercolor=titlered,
+    pdfborderstyle={/S/U/W 1}  } 	% Couleur des url
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Footer - Must be before sectioning ...
