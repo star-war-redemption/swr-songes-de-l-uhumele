@@ -62,14 +62,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Backgrounding 
 \RequirePackage{eso-pic}
+\RequirePackage{ocgx2}
 
 \newcommand\AtTextUpperRight[1]{\AtTextUpperLeft{%
    \makebox[\textwidth][r]{#1}}}
 
 \AddToShipoutPictureBG{%
+	\begin{ocg}[printocg=never,showingui=never]{background}{watermark}{on}
     \ifnum\value{page}>1
-    \AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd.jpg}}
+    \AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd_ss.jpg}}
     \fi
+    \end{ocg}
   }
 
 \AddToShipoutPicture{
