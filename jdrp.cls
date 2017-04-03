@@ -70,7 +70,7 @@
 \AddToShipoutPictureBG{%
 	\begin{ocg}[printocg=never,showingui=never]{background}{watermark}{on}
     \ifnum\value{page}>1
-    \AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd_ss.jpg}}
+    \AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{_img/bg-a4-odd.jpg}}
     \fi
     \end{ocg}
   }
