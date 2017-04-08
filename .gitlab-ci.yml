@@ -1,13 +1,22 @@
-before_script:
-  - apt-get update -qq && apt-get install -y -qq texlive-base texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-extra-utils texlive-fonts-recommended texlive-font-utils texlive-lang-french texlive-math-extra texlive-pictures latex-xcolor texlive-bibtex-extra pgf lmodern biber latexmk ghostscript
+image: marthym/latex:1.0.0
 
 dos-au-muur:
   stage: build
   script:
-    - latexmk dos-au-muur/dos-au-muur.tex || true
-    - gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/ebook -sOutputFile="SW-Redemption, Dos au Muur.pdf" build/dos-au-muur.pdf
-  only:
-  - tags
+    - latexmk -f dos-au-muur/dos-au-muur.tex || true
+    - mv "build/dos-au-muur.pdf" "SWR-Dos au Muur.pdf"
   artifacts:
     paths:
-    - "SW-Redemption, Dos au Muur.pdf"
+    - "SWR-Dos au Muur.pdf"
+  allow_failure: true
+
+songes-de-l-uhumele:
+  stage: build
+  script:
+    - latexmk -f songes-de-l-uhumele/songes-de-l-uhumele.tex || true
+    - mv "build/songes-de-l-uhumele.pdf" "SWR-Songes de l'Uhumele.pdf"
+
+  artifacts:
+    paths:
+    - "SWR-Songes de l'Uhumele.pdf"
+  allow_failure: true
