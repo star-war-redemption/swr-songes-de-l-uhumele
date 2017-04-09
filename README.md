@@ -3,7 +3,7 @@
 Pour aller avec le guide du joueur de Star Wars Redemption, voici quelques campagnes :
 
 
-![image](_img/wtfpl-badge.png)
+![image](https://git.framasoft.org/sw-redemption/latex-swr-class/raw/master/_img/wtfpl-badge.png)
 
 ## Contributions
 ### Clone

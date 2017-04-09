@@ -1,22 +1,30 @@
 image: marthym/latex:1.0.0
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
 
-dos-au-muur:
+songes-de-l-uhumele-SNAPSHOT:
   stage: build
-  script:
-    - latexmk -f dos-au-muur/dos-au-muur.tex || true
-    - mv "build/dos-au-muur.pdf" "SWR-Dos au Muur.pdf"
-  artifacts:
+  cache: 
     paths:
-    - "SWR-Dos au Muur.pdf"
-  allow_failure: true
-
-songes-de-l-uhumele:
-  stage: build
+      - "SWR-Songes de l'Uhumele.pdf"
   script:
-    - latexmk -f songes-de-l-uhumele/songes-de-l-uhumele.tex || true
+    - latexmk -f -r swr-class/latexmkrc || true
     - mv "build/songes-de-l-uhumele.pdf" "SWR-Songes de l'Uhumele.pdf"
 
   artifacts:
+    expire_in: 1 day
+    paths:
+    - "SWR-Songes de l'Uhumele.pdf"
+  allow_failure: true
+
+songes-de-l-uhumele-RELEASE:
+  stage: deploy
+  script:
+      - mv "SWR-Songes de l'Uhumele.pdf" "SWR-Songes de l'Uhumele v$CI_COMMIT_TAG.pdf"
+  only:
+    - tags
+  artifacts:
+    name: "SWR-Songes de l'Uhumele v$CI_COMMIT_TAG"
     paths:
     - "SWR-Songes de l'Uhumele.pdf"
   allow_failure: true
