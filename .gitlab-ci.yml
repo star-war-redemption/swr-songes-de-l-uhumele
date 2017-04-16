@@ -26,6 +26,6 @@ songes-de-l-uhumele-RELEASE:
   artifacts:
     name: "SWR-Songes de l'Uhumele v$CI_COMMIT_TAG"
     paths:
-    - "SWR-Songes de l'Uhumele.pdf"
+    - "SWR-Songes de l'Uhumele v$CI_COMMIT_TAG.pdf"
     - _img/forteresse-esseles.png
   allow_failure: true
